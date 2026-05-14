@@ -1,7 +1,0 @@
-User-Agent: *
-Allow: /
-Disallow: /api/
-Disallow: /_next/
-
-Host: https://mobirizer.com
-Sitemap: https://mobirizer.com/sitemap.xml

@@ -98,8 +98,8 @@ export default function ConversationalAIPage() {
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
-                      <Link href="/products/d23-ai">
-                        <span>See D23.ai Demo</span>
+                      <Link href="/case-studies">
+                        <span>See Related Case Studies</span>
                         <i className="ri-arrow-right-line" />
                       </Link>
                     </Button>

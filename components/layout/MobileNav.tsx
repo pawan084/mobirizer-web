@@ -13,9 +13,6 @@ interface MobileNavProps {
 
 const navLinks = [
   { href: '/', icon: 'ri-home-line', label: 'Home', page: 'home' },
-  { href: '/products', icon: 'ri-apps-2-line', label: 'Products', page: 'products' },
-  { href: '/products/d23-ai', icon: 'ri-whatsapp-line', label: 'D23.ai', page: null, indent: true },
-  { href: '/products/whatsapp-commerce', icon: 'ri-shopping-bag-3-line', label: 'WhatsApp Commerce', page: null, indent: true },
   { href: '/solutions', icon: 'ri-lightbulb-line', label: 'Solutions', page: 'solutions' },
   { href: '/solutions/agentic-ai', icon: 'ri-robot-line', label: 'Agentic AI', page: null, indent: true },
   { href: '/solutions/conversational-ai', icon: 'ri-chat-voice-line', label: 'Conversational AI', page: null, indent: true },

@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 interface LegacyHeaderProps {
-  activePage?: 'home' | 'products' | 'solutions' | 'company';
+  activePage?: 'home' | 'solutions' | 'company';
   basePath?: string;
 }
 
@@ -102,9 +102,6 @@ export function LegacyHeader({ activePage, basePath = '' }: LegacyHeaderProps) {
             >
               <Link href="/" className={activePage === 'home' ? 'active' : ''}>
                 Home
-              </Link>
-              <Link href="/products" className={activePage === 'products' ? 'active' : ''}>
-                Products
               </Link>
               <Link href="/solutions" className={activePage === 'solutions' ? 'active' : ''}>
                 Solutions

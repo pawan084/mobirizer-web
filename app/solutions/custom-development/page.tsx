@@ -105,8 +105,8 @@ export default function CustomDevelopmentPage() {
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
-                      <Link href="/products">
-                        <span>View Our Products</span>
+                      <Link href="/case-studies">
+                        <span>View Case Studies</span>
                         <i className="ri-arrow-right-line" />
                       </Link>
                     </Button>

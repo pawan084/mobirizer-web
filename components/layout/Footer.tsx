@@ -28,15 +28,6 @@ const socialLinks = [
   },
 ];
 
-const productLinks = [
-  { href: '/products/d23-ai', label: 'D23.ai' },
-  { href: '/products/roboguru', label: 'RoboGuru' },
-  { href: '/products/ohgrt', label: 'OHGRT' },
-  { href: '/products/xappy', label: 'Xappy.io' },
-  { href: '/products/janseva', label: 'JanSeva' },
-  { href: '/products/whatsapp-commerce', label: 'WhatsApp Commerce', defaultOnly: true },
-];
-
 const solutionLinks = [
   { href: '/solutions#agentic', label: 'Agentic AI' },
   { href: '/solutions#conversational', label: 'Conversational AI' },
@@ -49,6 +40,8 @@ const companyLinks = [
   { href: '/case-studies', label: 'Case Studies' },
   { href: '/industries', label: 'Industries' },
   { href: '/insights', label: 'Insights' },
+  { href: '/blog', label: 'Blog' },
+  { href: '/careers', label: 'Careers' },
   { href: '/contact', label: 'Contact' },
   { href: '/privacy-policy', label: 'Privacy Policy' },
   { href: '/terms-of-service', label: 'Terms of Service' },
@@ -63,28 +56,31 @@ export function Footer({ variant = 'default' }: FooterProps) {
       <div className="container">
         <div className="footer-grid">
           {/* Brand Section */}
-          <div className="footer-section">
-            <div className="flex items-center gap-3 mb-4">
+          <div className="footer-section footer-brand">
+            <div className="flex items-center gap-3 mb-5">
               <img
                 src="/assets/images/logo.png"
                 alt="Mobirizer Logo"
                 className="w-12 h-12 rounded-xl"
               />
-              <span className="text-xl font-bold text-white">Mobirizer</span>
+              <div>
+                <div className="text-xl font-bold text-white">Mobirizer</div>
+                <div className="text-sm text-white/55">AI Development Studio</div>
+              </div>
             </div>
-            <p className="text-white/70 leading-relaxed mb-4">
+            <p className="text-white/72 leading-relaxed mb-6 max-w-md">
               AI Development Studio building production-grade solutions
               {!isSimple && ' for government, education, healthcare, and enterprise clients'} since
               2014.
             </p>
-            <div className="flex gap-3">
+            <div className="footer-socials">
               {socialLinks.map((social) => (
                 <a
                   key={social.href}
                   href={social.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors"
+                  className="footer-social-link"
                   aria-label={social.label}
                 >
                   <i className={cn(social.icon, 'text-lg')}></i>
@@ -93,37 +89,15 @@ export function Footer({ variant = 'default' }: FooterProps) {
             </div>
           </div>
 
-          {/* Products */}
-          <div className="footer-section">
-            <h4>Products</h4>
-            <ul className="space-y-3">
-              {productLinks
-                .filter((link) => !link.defaultOnly || !isSimple)
-                .map((link) => (
-                  <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
-            </ul>
-          </div>
-
           {/* Solutions */}
           <div className="footer-section">
-            <h4>Solutions</h4>
-            <ul className="space-y-3">
+            <h4 className="footer-heading">Solutions</h4>
+            <ul className="footer-links">
               {solutionLinks
                 .filter((link) => !link.defaultOnly || !isSimple)
                 .map((link) => (
                   <li key={link.href}>
-                    <Link
-                      href={link.href}
-                      className="text-white/70 hover:text-white transition-colors"
-                    >
+                    <Link href={link.href} className="footer-link">
                       {link.label}
                     </Link>
                   </li>
@@ -133,14 +107,11 @@ export function Footer({ variant = 'default' }: FooterProps) {
 
           {/* Company */}
           <div className="footer-section">
-            <h4>Company</h4>
-            <ul className="space-y-3">
+            <h4 className="footer-heading">Company</h4>
+            <ul className="footer-links footer-links-two-col">
               {companyLinks.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-white/70 hover:text-white transition-colors"
-                  >
+                  <Link href={link.href} className="footer-link">
                     {link.label}
                   </Link>
                 </li>
@@ -150,10 +121,11 @@ export function Footer({ variant = 'default' }: FooterProps) {
         </div>
 
         {/* Footer Bottom */}
-        <div className="pt-8 mt-8 border-t border-white/10 text-center">
+        <div className="footer-bottom">
           <p className="text-white/60 text-sm">
-            &copy; {currentYear} Mobirizer Services Pvt. Ltd. All Rights Reserved.
+            &copy; {currentYear} Mobirizer Services Pvt. Ltd.
           </p>
+          <p className="text-white/45 text-sm">All Rights Reserved.</p>
         </div>
       </div>
     </footer>

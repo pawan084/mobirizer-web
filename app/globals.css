@@ -258,23 +258,47 @@
 
   /* Footer */
   .main-footer {
-    @apply bg-gradient-footer text-white pt-16 pb-8;
+    @apply bg-gradient-footer text-white pt-14 pb-8 mt-0;
   }
 
   .footer-grid {
-    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12;
+    @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[1.25fr_0.8fr_0.95fr] gap-10 mb-10 items-start;
+  }
+
+  .footer-brand {
+    @apply pr-0 lg:pr-10;
+  }
+
+  .footer-heading {
+    @apply text-lg font-semibold mb-5 text-white;
   }
 
   .footer-section h4 {
     @apply text-lg font-semibold mb-6 text-white;
   }
 
-  .footer-section ul {
-    @apply space-y-3;
+  .footer-links {
+    @apply space-y-3.5;
   }
 
-  .footer-section a {
-    @apply text-white/70 hover:text-white transition-colors;
+  .footer-links-two-col {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-3.5 space-y-0;
+  }
+
+  .footer-link {
+    @apply text-white/70 hover:text-white transition-colors inline-flex;
+  }
+
+  .footer-socials {
+    @apply flex gap-3 flex-wrap;
+  }
+
+  .footer-social-link {
+    @apply w-11 h-11 bg-white/10 rounded-xl flex items-center justify-center text-white hover:bg-white/20 transition-colors;
+  }
+
+  .footer-bottom {
+    @apply pt-7 mt-6 border-t border-white/10 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between;
   }
 }
 

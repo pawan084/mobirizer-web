@@ -102,7 +102,7 @@ export function ContactForm() {
             options={[
               { value: 'general', label: 'General Inquiry' },
               { value: 'project', label: 'Start a Project' },
-              { value: 'products', label: 'Product Information' },
+              { value: 'solutions', label: 'Solutions Information' },
               { value: 'partnership', label: 'Partnership Opportunity' },
               { value: 'support', label: 'Technical Support' },
             ]}

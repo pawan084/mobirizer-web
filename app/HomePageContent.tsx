@@ -46,8 +46,8 @@ export function HomePageContent() {
                       </Link>
                     </Button>
                     <Button variant="ghost" asChild>
-                      <Link href="/products">
-                        <span>Explore Products</span>
+                      <Link href="/solutions">
+                        <span>Explore Solutions</span>
                         <i className="ri-arrow-right-line" />
                       </Link>
                     </Button>
@@ -367,33 +367,33 @@ export function HomePageContent() {
                 {
                   icon: 'ri-whatsapp-line',
                   gradient: 'bg-gradient-whatsapp',
-                  name: 'D23.ai',
-                  type: 'WhatsApp AI Assistant',
-                  desc: 'AI-powered WhatsApp assistant serving 5000+ users with multilingual support, voice processing, and real-time information access across 11+ Indian languages.',
+                  name: 'Citizen Messaging AI',
+                  type: 'Public Service Automation',
+                  desc: 'A multilingual WhatsApp-based assistant designed to improve citizen access, automate routine support, and provide timely responses at scale.',
                   stats: [
                     { value: '1M+', label: 'Messages Processed' },
                     { value: '11+', label: 'Languages' },
                   ],
                   statColor: 'text-accent-green-light',
-                  link: '/products/d23-ai',
+                  link: '/case-studies',
                 },
                 {
                   icon: 'ri-voiceprint-line',
                   gradient: 'bg-gradient-purple',
-                  name: 'OHGRT',
-                  type: 'AI Voice Studio',
-                  desc: 'Professional AI voice generation platform enabling content creators and enterprises with text-to-speech, voice cloning, and video dubbing in 10+ languages.',
+                  name: 'Voice Automation Stack',
+                  type: 'AI Audio Workflow',
+                  desc: 'An AI voice workflow for teams that need scalable speech generation, multilingual audio delivery, and faster turnaround for content operations.',
                   stats: [
                     { value: '2M+', label: 'Downloads' },
                     { value: '4.8★', label: 'User Rating' },
                   ],
                   statColor: 'text-violet-300',
-                  link: '/products/ohgrt',
+                  link: '/case-studies',
                 },
                 {
                   icon: 'ri-heart-pulse-line',
                   gradient: 'bg-gradient-cyan',
-                  name: 'Xappy Healthcare',
+                  name: 'Healthcare Operations AI',
                   type: 'Government Healthcare',
                   desc: 'AI strategy addressing healthcare access, administrative pressure, and clinician support—deployed for government health departments with ethical standards.',
                   stats: [
@@ -401,7 +401,7 @@ export function HomePageContent() {
                     { value: '100K+', label: 'Records Managed' },
                   ],
                   statColor: 'text-cyan-300',
-                  link: '/products/xappy',
+                  link: '/case-studies',
                 },
               ].map((story, i) => (
                 <StaggerItem key={i} className="grid-item">
@@ -431,7 +431,7 @@ export function HomePageContent() {
                       href={story.link}
                       className="inline-flex items-center gap-2 text-indigo-300 text-sm font-semibold hover:text-indigo-200 transition-colors group"
                     >
-                      View Case Study <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform" />
+                      View Case Studies <i className="ri-arrow-right-line group-hover:translate-x-1 transition-transform" />
                     </Link>
                   </HoverCard>
                 </StaggerItem>
@@ -439,8 +439,8 @@ export function HomePageContent() {
             </Stagger>
             <Animated animation="fadeInUp" delay={0.4} className="text-center mt-10">
               <Button variant="ctaWhite" asChild>
-                <Link href="/products">
-                  <span>View All Products</span>
+                <Link href="/case-studies">
+                  <span>View All Case Studies</span>
                   <i className="ri-arrow-right-line" />
                 </Link>
               </Button>
